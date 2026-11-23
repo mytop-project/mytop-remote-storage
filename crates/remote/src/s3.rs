@@ -1,5 +1,5 @@
 //! S3-compatible storage: AWS S3, Backblaze B2, Wasabi, Cloudflare R2, MinIO, Garage and the like
-//! (Droidtop/tracker#573 design D2, item 4).
+//! (mytop-project/tracker#573 design D2, item 4).
 //!
 //! rusty-s3 signs each request (SigV4, as a presigned address valid for a few minutes); the request
 //! itself goes through ureq with rustls, as WebDAV's do. The person's own access key and secret are

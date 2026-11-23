@@ -1,4 +1,4 @@
-//! SMB 2 and 3: Windows shares, Samba, and most NAS (Droidtop/tracker#573 design D2, item 3).
+//! SMB 2 and 3: Windows shares, Samba, and most NAS (mytop-project/tracker#573 design D2, item 3).
 //!
 //! libsmb2 (sahlberg/libsmb2, tag libsmb2-6.3, LGPL-2.1-or-later; vendor/libsmb2, built by build.rs) is a
 //! userspace client: no root and no kernel module. VLC and Kodi use it to reach SMB shares on Android. This file

@@ -111,7 +111,7 @@ mod smb {
         let manifest = PathBuf::from(env::var("CARGO_MANIFEST_DIR").expect("cargo sets CARGO_MANIFEST_DIR"));
         let root = manifest.join("../../vendor/libsmb2");
         if !root.join("lib/libsmb2.c").is_file() {
-            panic!("vendor/libsmb2 is missing: run `git submodule update --init vendor/libsmb2` in lib-net");
+            panic!("vendor/libsmb2 is missing: run `git submodule update --init vendor/libsmb2` in mytop-net");
         }
         let out = PathBuf::from(env::var("OUT_DIR").expect("cargo sets OUT_DIR"));
         let mut config = String::from("/* net-remote's build.rs: the unix answers to libsmb2's cmake/config.h.cmake */\n");

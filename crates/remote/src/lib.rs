@@ -1,9 +1,9 @@
-//! The person's own shares and cloud storage, behind one interface (Droidtop/tracker#573).
+//! The person's own shares and cloud storage, behind one interface (mytop-project/tracker#573).
 //!
 //! A share is a network resource used for many things (owner, 2026-11-05: "A share can be a backend
 //! for a sync, but it's really just a network resource we can use for lots of stuff"), so it lives
-//! here and not in lib-sync. Every user of a share goes through [`Remote`]: a games root, the file
-//! picker, Downloads, droidtop's backups, and lib-sync's store and forward as one of its backends. A
+//! here and not in mytop-sync. Every user of a share goes through [`Remote`]: a games root, the file
+//! picker, Downloads, droidtop's backups, and mytop-sync's store and forward as one of its backends. A
 //! backend is one implementation of it:
 //! - [`LocalFolder`]: a folder on this computer (one the person's own sync tool carries, or a mount);
 //! - [`WebDav`]: Nextcloud, ownCloud, most NAS and any WebDAV server;
@@ -13,7 +13,7 @@
 //! Paths are relative to the share's root, `/`-separated, and checked by [`RemotePath`]: no `..`, no
 //! `.`, no empty segment and no backslash, so nothing a caller builds can climb out of the share.
 //!
-//! Blocking I/O on purpose, as in lib-sync's sync-core: callers run it on their own background thread. Every
+//! Blocking I/O on purpose, as in mytop-sync's sync-core: callers run it on their own background thread. Every
 //! network backend has a timeout, so a share that does not answer is an [`Error::Unreachable`],
 //! never a hang.
 

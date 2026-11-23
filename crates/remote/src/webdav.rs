@@ -1,5 +1,5 @@
 //! WebDAV (RFC 4918): Nextcloud, ownCloud, most NAS, Koofr, pCloud, Box and any WebDAV server
-//! (Droidtop/tracker#573 design D2, item 1; the store-and-forward backend of Droidtop/tracker#800).
+//! (mytop-project/tracker#573 design D2, item 1; the store-and-forward backend of mytop-project/tracker#800).
 //!
 //! The requests used: PROPFIND (depth 0 and 1), GET (with Range), PUT, MOVE, DELETE and MKCOL. The
 //! sign-in is HTTP Basic, sent only over https unless the person allowed plain http for this share.
